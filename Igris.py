@@ -4,12 +4,12 @@ import os
 
 app = Flask(__name__)
 
-API_KEY = os.environ.get("9eb5957851c72f50cec49b8c9fa1a424")
+API_KEY = os.environ.get("OPENWEATHER_API_KEY")
 
 @app.route('/')
 def home():
     return "Weather Bot is Live 🚀"
-
+                
 @app.route('/webhook', methods=['POST'])
 def webhook():
     req = request.get_json()
